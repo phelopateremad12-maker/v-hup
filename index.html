@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Persistent Rainy Hearts Background -->
+    <div id="hearts-container"></div>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+        
+        <!-- Step 1: Password Screen -->
+        <div id="password-screen" class="glass-panel active">
+            <h1>Enter Password</h1>
+            <p>Please enter the secret code to continue.</p>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Enter password...">
+                <button id="login-btn">Unlock</button>
+            </div>
+            <p id="error-message" class="hidden">Incorrect password. Try again!</p>
+        </div>
+
+        <!-- Step 2: First Video Screen -->
+        <div id="video1-screen" class="glass-panel hidden">
+            <div class="video-container">
+                <!-- Replace 'video1.mp4' with your actual video file path -->
+                <video id="video1" controls playsinline>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button id="next1-btn" class="hidden next-btn">Next ✨</button>
+        </div>
+
+        <!-- Step 3: Second Video Screen -->
+        <div id="video2-screen" class="glass-panel hidden">
+            <div class="video-container">
+                <!-- Replace 'video2.mp4' with your actual video file path -->
+                <video id="video2" controls playsinline>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button id="next2-btn" class="hidden next-btn">Finish 💖</button>
+        </div>
+
+        <!-- Step 4: Final Screen -->
+        <div id="final-screen" class="glass-panel hidden">
+            <h1>The End</h1>
+            <p>Hope you enjoyed the surprise!</p>
+            <button id="replay-btn" class="next-btn">Replay</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
